@@ -1,0 +1,264 @@
+:root {
+    --mainColor: #19283f;
+    --secondry-color: #33d1cc;
+    --btn-color: #ff3150;
+    --thrid-color: #ffc400;
+    --section-color: #eff7fa;
+}
+/* .............................
+    Start General
+.................................*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 2000px;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol {
+    list-style: none;
+}
+::selection {
+    background-color: #d6aeba;
+}
+button {
+    all: unset;
+}
+.btn:hover {
+    background-color: var(--seconrday-alt);
+}
+.main-btn{
+    background-color: var(--btn-color);
+    color: var(--thrid-color);
+    padding: 0.5rem 1rem;
+    /* cursor: pointer; */
+}
+.main-btn:hover{
+    background-color: #ac1f34;
+    color: #ffc400af;
+}
+.main_title::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--secondry-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+/* .............................
+    End General
+.................................*/
+/* .............................
+    Start Header
+.................................*/
+.navbar{
+    background-color: var(--mainColor);
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus{
+    color: var(--secondry-color) !important;
+}
+.navbar .search {
+    border-left: 1px solid var(--secondry-color);
+}
+.navbar .search .fa-magnifying-glass{
+    color: var(--secondry-color);
+}
+.navbar-toggler{
+    font-size: 25px;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--secondry-color) !important;
+}
+/* .............................
+    End Header
+.................................*/
+/* .............................
+    Start Hero Section
+.................................*/
+section.hero{
+    background-color: var(--mainColor);
+    min-height: calc(100vh - 71px);
+}
+.hero h1.hero_title{
+    font-size: 45px !important;
+}
+/* .............................
+    End Hero Section
+.................................*/
+/* .............................
+    Start Features Section
+.................................*/
+section.features .feat_icons {
+    height: 200px;
+    
+}
+section.features .feat_icons svg {
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+section.features .feat_icons .nubm {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+section.features .feat_icons .nub_icon{
+    color: var(--secondry-color);
+}
+section.features .feat_title{
+    color: var(--thrid-color);
+}
+/* .............................
+    End Features Section
+.................................*/
+/* .............................
+    Start Projects Section
+.................................*/
+section.projects{
+    background-color: var(--section-color);
+}
+section.projects ul li {
+    padding: 0.5rem ;
+    cursor: pointer;
+}
+section.projects ul li:not(.active):hover {
+    color: var(--btn-color);
+}
+section.projects ul .active {
+    background-color: var(--btn-color);
+    color: var(--thrid-color);
+}
+section.projects .pro_box{
+    padding: 0.5rem ;
+    overflow: hidden;
+}
+section.projects .pro_box::before{
+    content: attr(data-project);
+    position: absolute;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    background-color: #7cf8f4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--section-color);
+    font-weight: normal;
+    font-size: 30px;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 0.5rem));
+    -webkit-transform: translateX(calc(-100% - 0.5rem));
+    -moz-transform: translateX(calc(-100% - 0.5rem));
+    -ms-transform: translateX(calc(-100% - 0.5rem));
+    -o-transform: translateX(calc(-100% - 0.5rem));
+}
+section.projects .pro_box:hover::before {
+    transform: translateX(0);
+}
+/* .............................
+    End Projects Section
+.................................*/
+/* .............................
+    Start About Section
+.................................*/
+section.about .pro_descrption{
+    max-width: 500px;
+}
+section.team{
+    background-color: var(--section-color);
+}
+section.team h2{
+    color: var(--thrid-color);
+}
+section.team .team_title{
+    background-color: var(--secondry-color);
+    font-size: 23px;
+}
+section.team blockquote{
+    margin: 0 0 1rem;
+}
+/* .............................
+    End About Section
+.................................*/
+/* .............................
+    Start Your Project
+.................................*/
+section.your_project{
+    background-color: var(--mainColor);
+}
+/* .............................
+    End Your Project
+.................................*/
+/* .............................
+    Start Blog
+.................................*/
+/* There are not style for this section */
+/* .............................
+    End Blog
+.................................*/
+/* .............................
+    End Subscribe Section
+.................................*/
+section.subscribe{
+    background-color: var(--thrid-color);
+}
+section.subscribe .subscr_btn{
+    background-color: var(--mainColor);
+    color: var(--thrid-color);
+    outline: none;
+}
+section.subscribe .sub_input::placeholder{
+    color: white;
+}
+/* .............................
+    End Subscribe Section
+.................................*/
+/* .............................
+    End Footer
+.................................*/
+footer{
+    background-color: var(--mainColor);
+}
+footer .foot_icons svg{
+    width: 20px;
+    height: 20px;
+}
+.foot-blue{
+    color: var(--secondry-color);
+}
+.foot-yellow{
+    color: var(--thrid-color);
+}
+.youtube {
+    background-color: #ff0000;
+}
+.linkedin {
+    background-color: #0077b5;
+}
+.twitter{
+    background-color: #1da1f2;
+}
+.facebook {
+    background-color: #1877f2;
+}
+/* .............................
+    End Footer
+.................................*/
